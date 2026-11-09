@@ -1,0 +1,14 @@
+{
+  "version": 2,
+  "dgSpecHash": "Q7Ph4blu+5Q=",
+  "success": true,
+  "projectFilePath": "/home/runner/work/UniEventsDotNetProject/UniEventsDotNetProject/UniEvents.Api/UniEvents.Api.csproj",
+  "expectedPackageFiles": [
+    "/tmp/codeql-scratch-755c1d11eab36f80/dbs/csharp/working/packages/microsoft.aspnetcore.openapi/10.0.14/microsoft.aspnetcore.openapi.10.0.14.nupkg.sha512",
+    "/tmp/codeql-scratch-755c1d11eab36f80/dbs/csharp/working/packages/microsoft.openapi/2.12.2/microsoft.openapi.2.12.2.nupkg.sha512",
+    "/tmp/codeql-scratch-755c1d11eab36f80/dbs/csharp/working/packages/microsoft.netcore.app.ref/10.0.14/microsoft.netcore.app.ref.10.0.14.nupkg.sha512",
+    "/tmp/codeql-scratch-755c1d11eab36f80/dbs/csharp/working/packages/microsoft.aspnetcore.app.ref/10.0.14/microsoft.aspnetcore.app.ref.10.0.14.nupkg.sha512",
+    "/tmp/codeql-scratch-755c1d11eab36f80/dbs/csharp/working/packages/microsoft.netcore.app.host.linux-x64/10.0.14/microsoft.netcore.app.host.linux-x64.10.0.14.nupkg.sha512"
+  ],
+  "logs": []
+}
