@@ -1,0 +1,65 @@
+﻿@host = https://localhost:7244
+@studentToken = paste-student-token
+@organizerToken = paste-organizer-token
+@adminToken = paste-admin-token
+@eventId = 1
+
+### Register as a student
+POST {{host}}/api/auth/register
+Content-Type: application/json
+
+{
+  "fullName": "Sara Example",
+  "email": "sara@example.com",
+  "password": "Example-only-123"
+}
+
+### Sign in
+POST {{host}}/api/auth/login
+Content-Type: application/json
+
+{
+  "email": "sara@example.com",
+  "password": "Example-only-123"
+}
+
+### Browse categories
+GET {{host}}/api/categories
+
+### Browse and search upcoming events
+GET {{host}}/api/events?keyword=career
+
+### Create a pending event
+POST {{host}}/api/events
+Authorization: Bearer {{organizerToken}}
+Content-Type: application/json
+
+{
+  "title": "Career Workshop",
+  "description": "Bring your CV for feedback.",
+  "eventDate": "2027-12-01",
+  "startTime": "14:30:00",
+  "venue": "AUCA main campus",
+  "capacity": 25,
+  "categoryId": 5
+}
+
+### Approve the event
+POST {{host}}/api/admin/events/{{eventId}}/approve
+Authorization: Bearer {{adminToken}}
+
+### Join
+POST {{host}}/api/events/{{eventId}}/join
+Authorization: Bearer {{studentToken}}
+
+### My Events
+GET {{host}}/api/events/my-events
+Authorization: Bearer {{studentToken}}
+
+### Attendees
+GET {{host}}/api/events/{{eventId}}/attendees
+Authorization: Bearer {{organizerToken}}
+
+### Reports
+GET {{host}}/api/admin/reports
+Authorization: Bearer {{adminToken}}
